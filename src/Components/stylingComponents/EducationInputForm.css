@@ -11,3 +11,8 @@
 .EducationInputForm form div p {
     margin: 0px;
 }
+.ParentDivPreviewEducationForm{
+    border: solid red;
+    display: flex;
+    justify-content: space-between;
+}

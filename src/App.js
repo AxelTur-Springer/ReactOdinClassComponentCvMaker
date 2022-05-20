@@ -1,9 +1,9 @@
 import React,{Component} from "react";
 import { ReactDOM } from "react";
 import "./App.css"
-import PeronsalInfoForm from "./Components/PersonalInfoForm";
-import EducationInputForm from "./Components/EducationInputForm";
-import ExperienceInputForm from "./Components/ExperienceFormInfo";
+import PeronsalInfoForm from "./Components/FormComponents/PersonalInfoForm";
+import EducationInputForm from "./Components/FormComponents/EducationInputForm";
+import ExperienceInputForm from "./Components/FormComponents/ExperienceFormInfo";
 import CvPreview from "./Components/cvPreview";
 class App extends React.Component {  
   constructor(props){
@@ -14,7 +14,7 @@ class App extends React.Component {
       PersonalInfoNumber: "",
       PersonalInfoAge: "",
       PersonalInfoEmail: "",
-      EducationCompany:""
+      EducationInstitute:""
     
     }
     this.SetPersonalInfoComponent= this.SetPersonalInfoComponent.bind(this)
@@ -27,9 +27,10 @@ class App extends React.Component {
     console.log(this.state)
 }
 SetEducationInfoComponent(e){
-  e.preventDefault()
-
-  console.log(e)
+  this.setState({
+    EducationInstitute:e.target[0].value
+  })
+  console.log(this.state)
 }
     render(){   
         return (     
@@ -39,7 +40,7 @@ SetEducationInfoComponent(e){
                     <PeronsalInfoForm onClick ={this.SetPersonalInfoComponent} />
                   </div>
                   <div>
-                    <EducationInputForm onSubmit ={this.SetEducationInfoComponent}/>
+                    <EducationInputForm WhenSubmit ={this.SetEducationInfoComponent}/>
                   </div>
                   <div>
                   <ExperienceInputForm />
@@ -53,7 +54,7 @@ SetEducationInfoComponent(e){
                     Number ={this.state.PersonalInfoNumber}
                     Age ={this.state.PersonalInfoAge}
                     Email ={this.state.PersonalInfoEmail}
-                    Company = {this.state.EducationCompany}      
+                    Institute = {this.state.EducationInstitute}      
                     />
                   </div>
                  

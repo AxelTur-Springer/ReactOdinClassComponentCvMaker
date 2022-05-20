@@ -1,5 +1,5 @@
 import React from "react";
-import "./stylingComponents/ExperienceInputForm.css"
+import "../stylingComponents/ExperienceInputForm.css"
 
 export default class ExperienceInputForm extends React.Component{
     constructor(props){

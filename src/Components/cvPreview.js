@@ -19,7 +19,8 @@ export default class CvPreview extends React.Component{
                 <p>Number: {this.props.Number}</p>
                 </div>
                 <div>
-                <EducationPreview />
+                <EducationPreview
+                    Institute ={this.props.Institute}/>
                 </div>
             </div>
         )

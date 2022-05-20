@@ -1,5 +1,5 @@
 import React from "react";
-
+import "../stylingComponents/EducationInputForm.css"
 export default class EducationPreview extends React.Component{
     constructor(props){
         super(props);
@@ -7,10 +7,18 @@ export default class EducationPreview extends React.Component{
     }
     render(){
         return(
-            <div>
-                <p>
-                    institute:{this.props.Company}
-                </p>
+            <div className="ParentDivPreviewEducationForm">
+                <div>
+                    <p>Institute : {this.props.Institute}</p>
+                    <p>From :</p>
+                    <p>To :</p>
+                    <p>Title Achieved : </p>
+                </div>
+                <div>
+                    <button>
+                        Delete
+                    </button>
+                </div>
             </div>
 
         )

@@ -1,5 +1,5 @@
 import React from "react";
-import "./stylingComponents/PersonalInfo.css"
+import "../stylingComponents/PersonalInfo.css"
 export default class PeronsalInfoForm extends React.Component{
     constructor(props){
         super(props);

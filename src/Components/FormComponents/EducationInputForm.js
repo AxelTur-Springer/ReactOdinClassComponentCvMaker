@@ -1,11 +1,13 @@
 import React from "react";
-import "./stylingComponents/EducationInputForm.css"
+import "../stylingComponents/EducationInputForm.css"
 
 export default class EducationInputForm extends React.Component{
     constructor(props){
         super(props);
         this.value = this.value.bind(this)
         this.hideOrShow = this.hideOrShow.bind(this)
+        this.onSubmit = this.onSubmit.bind(this)
+
         this.state = {
             test:"name"
         }
@@ -25,8 +27,8 @@ export default class EducationInputForm extends React.Component{
     }
     }
     onSubmit(e){
-      console.log(e)
-      this.props.onSubmit(e)
+        e.preventDefault()
+        this.props.WhenSubmit(e)
     }
 
     render(){
@@ -38,29 +40,29 @@ export default class EducationInputForm extends React.Component{
                 <div>
                     <button onClick={this.hideOrShow}>Add</button>
                 </div>
-                <form action="" id="FormEducaion">
+                <form action="" id="FormEducaion" onSubmit={this.onSubmit}>
                     <div>
                         <p>Institute</p>
                         <input type="text" placeholder="Name"
-                        id="EducationInstitute" onChange={this.value}/>
+                        id="EducationInstitute"/>
                     </div>
                     <div>
                         <p>From</p>
                         <input type="date" placeholder="Age"
-                        id="EducationFrom" onChange={this.value}/>
+                        id="EducationFrom" />
                     </div>
                     <div>
                         <p>To</p>
                         <input type="date" placeholder="Address"
-                        id="EducationTo" onChange={this.value}/>
+                        id="EducationTo"/>
                     </div>
                     <div>
                         <p>Title</p>
                         <input type="text" placeholder="Level of education achieved"
-                        id="EducationTitle" onChange={this.value}/>
+                        id="EducationTitle" />
                     </div>
                     <div>
-                        <button type="submit" onSubmit={this.onSubmit}>Submit</button>
+                        <button >Submit</button>
                     </div>
                 </form>
                 
