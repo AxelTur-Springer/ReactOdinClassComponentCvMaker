@@ -1,0 +1,10 @@
+.PersonalInfoForm{
+    text-align: center;
+}
+.PersonalInfoForm form input{
+    border-radius: 5px;
+    border: solid lightblue 2px;
+}
+.PersonalInfoForm form div p {
+    margin: 5px;
+}

@@ -1,0 +1,13 @@
+#FormExperience{
+    display: none;
+}
+.ExperienceInputForm{
+    text-align: center;
+}
+.ExperienceInputForm form input{
+    border-radius: 5px;
+    border: solid lightblue;
+}
+.ExperienceInputForm form div p {
+    margin: 0px;
+}

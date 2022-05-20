@@ -1,0 +1,13 @@
+#FormEducaion{
+    display: none;
+}
+.EducationInputForm{
+    text-align: center;
+}
+.EducationInputForm form input{
+    border-radius: 5px;
+    border: solid lightblue;
+}
+.EducationInputForm form div p {
+    margin: 0px;
+}
