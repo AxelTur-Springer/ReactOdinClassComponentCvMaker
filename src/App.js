@@ -24,7 +24,6 @@ class App extends React.Component {
   SetPersonalInfoComponent(Input){
     let inputHolder = Input.target.id
     this.setState({[inputHolder]:Input.target.value})  
-    console.log(this.state)
 }
 SetEducationInfoComponent(e){
   this.setState({
@@ -40,7 +39,11 @@ SetEducationInfoComponent(e){
                     <PeronsalInfoForm onClick ={this.SetPersonalInfoComponent} />
                   </div>
                   <div>
-                    <EducationInputForm WhenSubmit ={this.SetEducationInfoComponent}/>
+                    <EducationInputForm 
+                    WhenSubmit ={this.SetEducationInfoComponent}
+          
+
+                    />
                   </div>
                   <div>
                   <ExperienceInputForm />
@@ -54,7 +57,7 @@ SetEducationInfoComponent(e){
                     Number ={this.state.PersonalInfoNumber}
                     Age ={this.state.PersonalInfoAge}
                     Email ={this.state.PersonalInfoEmail}
-                    Institute = {this.state.EducationInstitute}      
+                    Test = {this.state.EducationInstitute}      
                     />
                   </div>
                  
@@ -62,5 +65,4 @@ SetEducationInfoComponent(e){
             </div>   
         );          
     }}
-  
     export default App; 

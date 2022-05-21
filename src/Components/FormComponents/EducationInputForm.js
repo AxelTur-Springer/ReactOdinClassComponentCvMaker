@@ -62,10 +62,9 @@ export default class EducationInputForm extends React.Component{
                         id="EducationTitle" />
                     </div>
                     <div>
-                        <button >Submit</button>
+                        <button>Submit</button>
                     </div>
                 </form>
-                
             </div>
         )
     }

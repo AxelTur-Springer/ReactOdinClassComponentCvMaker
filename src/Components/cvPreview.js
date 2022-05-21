@@ -1,11 +1,32 @@
 import React from "react";
-import EducationPreview from "./PreviewComponents/EducationPre";
 
 export default class CvPreview extends React.Component{
     constructor(props){
         super(props);
+        this.state = {
+            numChildren: 0,
+            Institute :[]
+          }
     }
+
+    onAddChild = () => {
+        this.setState(state => {
+          const Institute = state.Institute.concat(
+            <Child Institute ={this.props.Test} />);
+          return {
+            Institute
+          };
+        });
+        console.log(this.state)
+      };
     render(){
+        const children = [];
+  
+        for (var i = 0; i < this.state.numChildren; i += 1) {
+          children.push(<Child key={i} number={i} 
+            Institute ={this.props.Institute[i]}/>);
+            console.log(this.state)
+        };
         return(
             <div>
                 <div>
@@ -19,10 +40,58 @@ export default class CvPreview extends React.Component{
                 <p>Number: {this.props.Number}</p>
                 </div>
                 <div>
-                <EducationPreview
-                    Institute ={this.props.Institute}/>
+                <TestParent addChild={this.onAddChild} 
+                Institute ={this.props.Institute}>
+                        {children}
+                </TestParent>
+                {this.state.Institute}
                 </div>
             </div>
         )
     }
 }
+
+
+class TestParent extends React.Component{
+    constructor(props){
+        super(props);
+        this.state={
+            Institute:this.props.Institute
+        }
+    }
+    /*componentDidUpdate(prevProps) {
+        if (this.props.Institute !== prevProps.Institute) {
+            this.setState({
+                Institute:this.props.Institute,
+            })
+        }
+      }
+      */
+    render(){
+
+        return(
+            <div className="card calculator">
+            <p><a href="#" onClick={this.props.addChild}>
+            Add Another Child Component</a></p>
+            <div id="children-pane">
+              {this.props.children}
+            </div>
+          </div>
+        )
+    }
+}
+
+class Child extends React.Component{
+    constructor(props){
+        super(props);
+ 
+   }
+   render(){
+       return(
+           <div>
+               <div>{"I am child " + this.props.Institute}</div>
+           </div>
+       )
+   }
+}
+
