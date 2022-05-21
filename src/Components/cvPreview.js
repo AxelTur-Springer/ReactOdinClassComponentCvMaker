@@ -1,16 +1,33 @@
 import React from "react";
 import EducationPreview from "./PreviewComponents/EducationPre";
+import ExperiencePreview from "./PreviewComponents/ExperiencePre";
 import "./stylingComponents/CvPreview.css"
 export default class CvPreview extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            ChildrenEducation :[],
+            ChildrenEducation :[], //Components for education
+            ChildrenExperience:[] // components for experience
           }
     }
-
-      componentDidUpdate(prevProps) {
-        if (this.props.Institute !== prevProps.Institute ||
+    componentDidUpdate(prevProps) {
+          // Case For Submit info from Experience
+      if (this.props.ExperienceCompany !== prevProps.ExperienceCompany) {
+        this.setState(state => {
+            const ChildrenExperience = state.ChildrenExperience.concat(
+              <ExperiencePreview 
+              Company ={this.props.ExperienceCompany}
+              ExperienceFrom ={this.props.ExperienceFrom}  
+              ExperienceTo ={this.props.ExperienceTo}
+              ExperienceLevel ={this.props.ExperienceLevel}
+              />);
+            return {
+              ChildrenExperience
+            };
+          });
+    }
+    // Case For Submit info from education 
+      else if (this.props.Institute !== prevProps.Institute ||
             this.props.EducationLevel !== prevProps.EducationLevel) {
             this.setState(state => {
                 const ChildrenEducation = state.ChildrenEducation.concat(
@@ -26,7 +43,8 @@ export default class CvPreview extends React.Component{
               });
         }
       }
-    render(){
+  
+      render(){
         return(
             <div>
                 <div>
@@ -40,7 +58,14 @@ export default class CvPreview extends React.Component{
                 <p>Number: {this.props.Number}</p>
                 </div>
                 <div>
-                  {this.state.ChildrenEducation}
+                  <div>
+                    <h2>Education</h2>
+                    {this.state.ChildrenEducation}
+                  </div>
+                  <div>
+                  <h2>Experience</h2>
+                    {this.state.ChildrenExperience}
+                  </div>
                 </div>
             </div>
         )

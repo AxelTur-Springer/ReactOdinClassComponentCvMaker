@@ -17,11 +17,16 @@ class App extends React.Component {
       EducationInstitute:"",
       EducationFrom :"",
       EducationTo:"",
-      EducationLevel: ""
+      EducationLevel: "",
+      ExperienceCompany:"",
+      ExperienceFrom :"",
+      ExperienceTo:"",
+      ExperienceLevel: ""
     
     }
     this.SetPersonalInfoComponent= this.SetPersonalInfoComponent.bind(this)
     this.SetEducationInfoComponent= this.SetEducationInfoComponent.bind(this)
+    this.SetExperienceInfoComponent= this.SetExperienceInfoComponent.bind(this)
 
   }
   SetPersonalInfoComponent(Input){
@@ -38,6 +43,16 @@ SetEducationInfoComponent(e){
   })
   console.log(this.state)
 }
+SetExperienceInfoComponent(e){
+  this.setState({
+    ExperienceCompany:e.target[0].value,
+    ExperienceFrom: e.target[1].value,
+    ExperienceTo: e.target[2].value,
+    ExperienceLevel:e.target[3].value
+
+  })
+  console.log(this.state)
+}
     render(){   
         return (     
             <div className="App">  
@@ -48,12 +63,12 @@ SetEducationInfoComponent(e){
                   <div>
                     <EducationInputForm 
                     WhenSubmit ={this.SetEducationInfoComponent}
-          
-
                     />
                   </div>
                   <div>
-                  <ExperienceInputForm />
+                  <ExperienceInputForm 
+                   WhenSubmit ={this.SetExperienceInfoComponent}
+                  />
                   </div>
                 </div>
                 <div className="PreviewContainer">
@@ -67,7 +82,11 @@ SetEducationInfoComponent(e){
                     Institute = {this.state.EducationInstitute}
                     EducationFrom ={this.state.EducationFrom}  
                     EducationTo = {this.state.EducationTo}
-                    EducationLevel ={this.state.EducationLevel}      
+                    EducationLevel ={this.state.EducationLevel}
+                    ExperienceCompany ={this.state.ExperienceCompany}
+                    ExperienceFrom ={this.state.ExperienceFrom}
+                    ExperienceTo = {this.state.ExperienceTo}
+                    ExperienceLevel = {this.state.ExperienceLevel}
                     />
                   </div>
                  
