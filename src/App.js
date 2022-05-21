@@ -14,7 +14,10 @@ class App extends React.Component {
       PersonalInfoNumber: "",
       PersonalInfoAge: "",
       PersonalInfoEmail: "",
-      EducationInstitute:""
+      EducationInstitute:"",
+      EducationFrom :"",
+      EducationTo:"",
+      EducationLevel: ""
     
     }
     this.SetPersonalInfoComponent= this.SetPersonalInfoComponent.bind(this)
@@ -27,7 +30,11 @@ class App extends React.Component {
 }
 SetEducationInfoComponent(e){
   this.setState({
-    EducationInstitute:e.target[0].value
+    EducationInstitute:e.target[0].value,
+    EducationFrom: e.target[1].value,
+    EducationTo: e.target[2].value,
+    EducationLevel:e.target[3].value
+
   })
   console.log(this.state)
 }
@@ -57,7 +64,10 @@ SetEducationInfoComponent(e){
                     Number ={this.state.PersonalInfoNumber}
                     Age ={this.state.PersonalInfoAge}
                     Email ={this.state.PersonalInfoEmail}
-                    Test = {this.state.EducationInstitute}      
+                    Institute = {this.state.EducationInstitute}
+                    EducationFrom ={this.state.EducationFrom}  
+                    EducationTo = {this.state.EducationTo}
+                    EducationLevel ={this.state.EducationLevel}      
                     />
                   </div>
                  

@@ -1,0 +1,11 @@
+.EducationPreviewContainer{
+    width: 90%;
+    border-top: dotted rgb(88, 88, 88) ;
+    display: flex;
+    justify-content: space-between;
+}
+.EducationPreviewContainer div button{
+    margin-top: 1em;
+    background-color: inherit;
+    border: none;
+}
