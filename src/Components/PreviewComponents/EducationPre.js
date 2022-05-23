@@ -4,10 +4,12 @@ export default class EducationPreview extends React.Component{
     constructor(props){
         super(props);
         this.erase = this.erase.bind(this)
+
    }
    erase(e){
     e.target.parentElement.parentElement.remove()
    }
+
    render(){
        return(
            <div className="EducationPreviewContainer">
@@ -21,7 +23,7 @@ export default class EducationPreview extends React.Component{
                </div>
              
                <div className="EducationEraseBtnDiv" >
-                    <button onClick={this.erase}> Delete</button>
+                    <button onClick={this.erase}>Delete</button>
                </div>
            </div>
        )

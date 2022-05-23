@@ -8,3 +8,8 @@
 .PersonalInfoForm form div p {
     margin: 5px;
 }
+@media only screen and (max-width: 775px) {
+    .PersonalInfoForm form input{
+     width: 7em;
+    }
+  }

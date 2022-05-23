@@ -1,4 +1,5 @@
 import React from "react";
+import "../stylingComponents/CvPreview.css"
 export default class ExperiencePreview extends React.Component{
     constructor(props){
         super(props);
@@ -9,7 +10,7 @@ export default class ExperiencePreview extends React.Component{
    }
    render(){
        return(
-           <div className="">
+           <div className="ExperiencePreviewContainer">
                <div>
                     <h2> Company: {this.props.Company} </h2>   
                 <div>

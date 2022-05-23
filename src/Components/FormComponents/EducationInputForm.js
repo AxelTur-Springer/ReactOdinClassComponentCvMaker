@@ -61,7 +61,7 @@ export default class EducationInputForm extends React.Component{
                         <input type="text" placeholder="Level of education achieved"
                         id="EducationTitle" />
                     </div>
-                    <div>
+                    <div className="btnCont">
                         <button>Submit</button>
                     </div>
                 </form>

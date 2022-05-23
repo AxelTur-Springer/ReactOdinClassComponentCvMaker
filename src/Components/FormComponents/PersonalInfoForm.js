@@ -22,10 +22,11 @@ export default class PeronsalInfoForm extends React.Component{
                         id="PersonalInfoName" onChange={this.value}/>
                     </div>
                     <div>
-                        <p>Enter Age</p>
-                        <input type="text" placeholder="Age"
-                        id="PersonalInfoAge" onChange={this.value}/>
+                        <p>Enter Profesion</p>
+                        <input type="text" placeholder="Profesion"
+                        id="Profesion" onChange={this.value}/>
                     </div>
+                   
                     <div>
                         <p>Enter Address</p>
                         <input type="text" placeholder="Address"
@@ -41,6 +42,7 @@ export default class PeronsalInfoForm extends React.Component{
                         <input type="text" placeholder="Phone Number"
                         id="PersonalInfoNumber" onChange={this.value}/>
                     </div>
+                  
                 </form>
             </div>
         )

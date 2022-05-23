@@ -11,3 +11,18 @@
 .ExperienceInputForm form div p {
     margin: 0px;
 }
+.btnCont{
+    margin-top: 5px;
+}
+.ExperienceInputForm button{
+    border: none;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+@media only screen and (max-width: 775px) {
+    .ExperienceInputForm form input{
+     width: 7em;
+    }
+  }

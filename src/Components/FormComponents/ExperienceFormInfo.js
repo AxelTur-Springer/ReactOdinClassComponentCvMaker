@@ -58,7 +58,7 @@ export default class ExperienceInputForm extends React.Component{
                         <input type="text" placeholder="Ocupied position"
                         id="ExperiencePosicion"/>
                     </div>
-                    <div>
+                    <div className="btnCont">
                         <button type="submit">Submit</button>
                     </div>
                 </form>

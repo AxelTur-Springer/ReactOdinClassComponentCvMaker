@@ -2,7 +2,7 @@ import React from "react";
 import EducationPreview from "./PreviewComponents/EducationPre";
 import ExperiencePreview from "./PreviewComponents/ExperiencePre";
 import "./stylingComponents/CvPreview.css"
-export default class CvPreview extends React.Component{
+export default class PreviewCv extends React.Component{
     constructor(props){
         super(props);
         this.state = {
@@ -45,25 +45,28 @@ export default class CvPreview extends React.Component{
       }
   
       render(){
+      
         return(
-            <div>
-                <div>
-                    <h1>Curriculum Vitae</h1>
+            <div className="CvPreviewFullDiv">
+              <div className="ContainerNameContact">
+                <div className="NameProfession">
+                  <h2>{this.props.Name}</h2>
+                  <p>{this.props.Profession}</p>
                 </div>
-                <div className="personalInfo">
-                <p>Full Name: {this.props.Name}</p>
-                <p>Age: {this.props.Age}</p>
-                <p>Address: {this.props.Address}</p>
-                <p>Email: {this.props.Email}</p>
-                <p>Number: {this.props.Number}</p>
+                <div className="PersonalInfoCont">
+                  <p><i className="ri-home-2-line"></i>
+                    {" "}{this.props.Address}</p>
+                  <p><i className="ri-mail-line"></i>
+                    {" "}{this.props.Email}</p>
+                  <p><i className="ri-phone-line"></i>
+                    {" "}{this.props.Number}</p>
                 </div>
+              </div>
                 <div>
                   <div>
-                    <h2>Education</h2>
                     {this.state.ChildrenEducation}
                   </div>
                   <div>
-                  <h2>Experience</h2>
                     {this.state.ChildrenExperience}
                   </div>
                 </div>

@@ -4,16 +4,17 @@ import "./App.css"
 import PeronsalInfoForm from "./Components/FormComponents/PersonalInfoForm";
 import EducationInputForm from "./Components/FormComponents/EducationInputForm";
 import ExperienceInputForm from "./Components/FormComponents/ExperienceFormInfo";
-import CvPreview from "./Components/cvPreview";
+import PreviewCv from "./Components/cvPreview";
 class App extends React.Component {  
   constructor(props){
     super(props)
     this.state ={
-      PersonalInfoName:"",
-      PersonalInfoAddress: "",
-      PersonalInfoNumber: "",
-      PersonalInfoAge: "",
-      PersonalInfoEmail: "",
+      PersonalInfoName:"Axel Tur-Springer",
+      Profesion:"Front End Developer ",
+      PersonalInfoAddress: "Fake Address",
+      PersonalInfoNumber: "3654785462",
+      PersonalInfoAge: "24",
+      PersonalInfoEmail: "FakeEmail@gmail.com",
       EducationInstitute:"",
       EducationFrom :"",
       EducationTo:"",
@@ -73,11 +74,12 @@ SetExperienceInfoComponent(e){
                 </div>
                 <div className="PreviewContainer">
                   <div>
-                    <CvPreview 
+                    <PreviewCv 
                     Name ={this.state.PersonalInfoName}
+                    Profession ={this.state.Profesion}
                     Address ={this.state.PersonalInfoAddress}
                     Number ={this.state.PersonalInfoNumber}
-                    Age ={this.state.PersonalInfoAge}
+
                     Email ={this.state.PersonalInfoEmail}
                     Institute = {this.state.EducationInstitute}
                     EducationFrom ={this.state.EducationFrom}  

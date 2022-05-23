@@ -1,6 +1,18 @@
+.CvPreviewFullDiv{
+    margin-left: 2em;
+}
+.ContainerNameContact{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid rgb(94, 94, 94);
+    width: 98%;
+}
+
+.PersonalInfoCont{
+    width: 20em; 
+}
 .EducationPreviewContainer{
     width: 90%;
-    border-top: dotted rgb(88, 88, 88) ;
     display: flex;
     justify-content: space-between;
 }
@@ -9,3 +21,26 @@
     background-color: inherit;
     border: none;
 }
+
+.ExperiencePreviewContainer{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+.ExperiencePreviewContainer div button{
+    margin-top: 1em;
+    background-color: inherit;
+    border: none;
+}
+@media only screen and (max-width: 775px) {
+    .PersonalInfoCont{
+        width: 15em; 
+    }
+    .ContainerNameContact{
+     
+        width: 100%;
+    }
+    .CvPreviewFullDiv{
+        margin-left: 0em;
+    }
+  }
