@@ -37,7 +37,7 @@
         width: 15em; 
     }
     .ContainerNameContact{
-     
+     border-top:  black 1px  dotted;
         width: 100%;
     }
     .CvPreviewFullDiv{
